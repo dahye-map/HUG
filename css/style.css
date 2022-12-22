@@ -188,10 +188,10 @@ hr { background:#f2f2f2; height:10px; border:0; margin:0; padding:0; }
 .consult-noti-wrap { margin-top:26px; padding-bottom:20px; }
 .consult-noti-wrap .tit { padding-bottom:10px; text-align:center; font-size:15px; color:#222; }
 .consult-noti-wrap ul { background:#f8f8f8; height:300px; padding:20px; border:1px solid #ddd; overflow:auto; }
-.consult-noti-wrap ul::-webkit-scrollbar {
+.consult-noti-wrap > *::-webkit-scrollbar {
     width:4px;
 }
-.consult-noti-wrap ul::-webkit-scrollbar-thumb {
+.consult-noti-wrap > *::-webkit-scrollbar-thumb {
     background-color:#c2c2c2;
 }
 .consult-noti-wrap ul li { padding-bottom:20px; font-size:15px; line-height:20px; color:#555; }
@@ -307,14 +307,13 @@ hr { background:#f2f2f2; height:10px; border:0; margin:0; padding:0; }
 
 /* 1:1 법률상담 신청내역  */
 .board .list-wrap > ul > li .tit { padding-right:0; }
-.list-wrap .info-qna { display:block; width:100%; padding-right:55px; background:url('../images/common/arrw_right08.png') no-repeat right; background-size:10px; }
+.list-wrap .info-qna { display:block; width:100%; padding-right:39px; background:url('../images/common/arrw_right08.png') no-repeat right; background-size:10px;}
 .info-txt-wrap{ display:flex; justify-content:space-between; margin-top:7px; color:#555;}
 .info-txt-wrap .info-txt01{ color:inherit;}
 .info-txt-wrap .info-txt02{ color:#222; }
 .info-txt02.active{color:#2d93d0;}
 .consult-noti-wrap.type02{margin-top:10px;margin-bottom:0;padding-bottom:0px;background:#f8f8f8;border: 1px solid #ddd;}
-.consult-noti-wrap.type02 ul{height: 60px;margin: 15px;padding:0 10px 0 0;border: none;}
-.consult-noti-wrap.type02 ul li{font-size: 14px;letter-spacing:-0.35px;color:#222;white-space:pre-line;}
+.consult-noti-wrap.type02 .consult-q{height: 60px;margin: 15px;padding:0 10px 0 0;border: none;overflow: auto;font-size: 14px;letter-spacing:-0.35px;color:#222;white-space:pre-line;}
+
 .consult-noti-wrap.type02.bg-white{background: #fff;}
-.consult-noti-wrap.type02.bg-white ul{background: #fff;}
-.consult-noti-wrap.type02.bg-white ul li{color:#555;}
+.consult-noti-wrap.type02.bg-white .consult-q{background: #fff;color:#555;}
