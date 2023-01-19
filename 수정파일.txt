@@ -1,3 +1,18 @@
+-html
+MHCP_02000000.html
+MHLI_01000001_01.html
+MHLI_01000001.html
+MHMA_01000000_gnb_login.html
+MHMA_01000000_gnb.html
+MHMA_01000000.html
+MHSD_01000000_02.html
+MHSD_01000000.html
+MHSD_01000001.html
+MHSD_01000002.html
+MHSD_01000003.html
+MHSD_01010100.html
+MHSD_01010101.html
+
 - images
 /images/main/main_guide_type03.png
 /images/sub/img_submn01@3x.png
@@ -25,6 +40,12 @@
 /images/sub/icon_danger_sign.png
 /images/sub/icon_prev.png
 /images/sub/icon_next.png
+/images/sub/icon_main_arrow.png
+/images/sub/icon_main_arrow.svg
+/images/sub/icon_submn_mid01.png
+/images/sub/icon_submn_mid02.png
+/images/sub/icon_submn_mid03.png
+/images/sub/icon_submn_mid04.png
 
 -css
 /css/common.css 기존 퍼블 css

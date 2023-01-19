@@ -37,7 +37,21 @@
                         <h3 class="blind">주택 검색 후 시세 결과 본문</h3>
                         <div class="addr-detail">
                             <div class="tag-wrap">
-                                <div class="tag">등록임대주택</div>
+                                <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
+                                <div class="tag tooltip-wrap">
+                                    등록임대주택
+                                    <button type="button" class="btn btn-ico ico-help03">
+                                        <span class="blind">도움말 보기</span>
+                                    </button>
+
+                                    <div class="tooltip left">
+                                        <span class="tooltip-txt">
+                                            해당 주택의 소유자는 임대사업자로 이 주택을 임대주택으로 등록하여 임대중입니다.
+                                        </span>
+                                        <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
+                                    </div>
+                                </div>
+                                <!-- //e:툴팁 -->
                                 <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
                                 <div class="tag tooltip-wrap">
                                     임대보증금보증가입
@@ -47,7 +61,7 @@
 
                                     <div class="tooltip right">
                                         <span class="tooltip-txt">
-                                            민간임대주택법에 따른 등록 임대주택 여부 및 임대보증 가입 여부
+                                            임대주택으로써 HUG 임대보증금보증에 가입된 주택입니다.
                                         </span>
                                         <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
                                     </div>
@@ -55,7 +69,7 @@
                                 <!-- //e:툴팁 -->
                             </div>
                             <p class="addr">
-                                부산광역시 연제구 거제천로225번길 
+                                부산광역시 연제구 거제천로225번길 
                                 25 직원숙소 2동 203호
                             </p>
                         </div>
@@ -67,6 +81,24 @@
                 <!-- //e:상단 결과 -->
 
                 <div class="inner-20">
+
+                    <!-- s:결과 요약 -->
+                    <div class="summary-wrap">
+                        <div class="summary danger">
+                            <div class="img">위험</div>
+                            <div class="txt">위반건축물<br>등록</div>
+                        </div>
+                        <div class="summary safe">
+                            <div class="img">안전</div>
+                            <div class="txt">무허가 건축물<br>아님</div>
+                        </div>
+                        <div class="summary danger">
+                            <div class="img">위험</div>
+                            <div class="txt">권리침해<br>확인됨</div>
+                        </div>
+                    </div>
+                    <!-- //e:결과 요약 -->
+
                     <!-- s:전세(임대) 입주일 / 보증금액 -->
                     <div class="relax-result-wrap">
                         <div class="relax-result">
@@ -76,11 +108,11 @@
                             <div class="form-wrap">
                                 <div class="form-box">
                                     <div class="frm-tit">
-                                        <label for="frmDate">입주일 또는 입주 예정일은?</label>
+                                        <label for="frmDate">입주일 또는 입주 예정일은?</label>
                                     </div>
                                     <div class="frm-form">
                                         <div class="common-input type-date">
-                                            <input type="date" id="frmDate" name="" title="입주일 또는 입주 예정일을 입력하세요." value="" data-placeholder="입주일 또는 입주 예정일은?" required="" aria-required="true">
+                                            <input type="date" id="frmDate" name="" title="입주일 또는 입주 예정일을 입력하세요." value="" data-placeholder="입주일 또는 입주 예정일은?" required="" aria-required="true">
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +123,7 @@
                                     </div>
                                     <div class="frm-form">
                                         <div class="common-input type-unit">
-                                            <input type="tel" class="ta-r" id="frmArea1" name="item2" title="전세(임대)보증금을 입력" value="" pattern="[0-9]*" inputmode="numeric">
+                                            <input type="tel" class="ta-r" id="frmArea1" name="item2" title="전세(임대)보증금을 입력" value="" pattern="[0-9]*" inputmode="numeric">
                                             <em>원</em>
                                         </div>
                                     </div>
@@ -113,24 +145,31 @@
                 <div class="total-result active">
                     <div class="relax-result-wrap">
                         <div class="relax-result">
-                            <h3 class="title">자가진단 결과</h3>
-    
-                            <div class="warning">
+                            <!-- <div class="warning">
                                 <p class="txt">안전하지 않습니다.</p>
-                            </div>
+                            </div> -->
+
+                            <div class="graph">그래프부분</div>
 
                             <div class="txt-wrap">
-                                <p class="txt">
-                                    위반건축물입니다. 전세보증가입, 전세대출 등에 제한이 있을 수 있습니다.
-                                    <br><br>
-                                    예상되는 경매 낙찰가(2억 1,0000)를 9,000만원 초과하고 있습니다. 임대인이 돈을 돌려주지 않을 경우 손해 가능성이 있습니다.
+                                <p class="txt type05 mt-20">
+                                    이 주택은 2.1억원<span>(전세가율 기준)</span> 이하의 보증금으로 전세계약을 권유 드립니다.
+                                </p>
+                                <p class="txt type02 mt-20">
+                                    1.8억원<span>(경매낙출율 기준)</span> 이하로 계약하는 경우 경매에 넘어가도 보증금 회복 가능성이 높습니다.
+                                </p>
+                                <p class="txt type05 mt-20">
+                                    입력하신 보증금과 표시된 시세를 기준으로 HUG 전세보증가입이 <em class="fc-blue">[가능]</em> / <em class="fc-red">[불가능]</em> 합니다.
                                 </p>
                             </div>
 
-                            <div class="graph"></div>
+                            <div class="more-info type03">
+                                <p class="txt">보증신청 시 HUG 주택가격산정 기준 및 기타요건에 따라 다른 결과가 나올 수 있으니 가입요건을 확인하고 보증을 신청해보세요.</p>
+                                <a href="" title="전세보증 신청으로 이동" class="btn-linktxt type04"><span>전세보증 신청 바로가기</span></a>
+                            </div>
 
                             <!-- s:자가진단 결과 테이블 -->
-                            <div class="tb-result mt-20">
+                            <div class="tb-result mt-40">
                                 <div class="table-wrap type02">
                                     <table>
                                         <caption>구분, 설정(임차)액, 순위, 배당예상액으로 구성된 자가진단 결과 내용</caption>
@@ -216,13 +255,13 @@
 
                             <div class="txt-wrap mt-20">
                                 <p class="txt type02 ta-c">
-                                    입주 시 선순위 저당권을 말소하는 <br>계약을 하셨다면
+                                    입주 시 선순위 저당권을 말소하는 <br>계약을 하셨다면
                                 </p>
                             </div>
                             <button type="button" class="btn btn-lg btn-type10 mt-20"><span>선순위 제외 진단</span></button>
                             <div class="txt-wrap mt-20">
                                 <p class="txt type02">
-                                    내 보증금을 안전하게 지키기 위해서 HUG 전세보증금 반환보증에 가입하거나 안전보증금 이내로 계약하길 권해드립니다.
+                                    내 보증금을 안전하게 지키기 위해서 HUG 전세보증금 반환보증에 가입하거나 안전보증금 이내로 계약하길 권해드립니다.
                                 </p>
                             </div>
                         </div>
@@ -241,7 +280,7 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">주소</th>
-                                        <td>[집합건물] 부산광역시 연제구 거제천로 225번길 29 주택보증공사직원숙소 2층 203호</td>
+                                        <td>[집합건물] 부산광역시 연제구 거제천로 225번길 29 주택보증공사직원숙소 2층 203호</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">주택시세</th>

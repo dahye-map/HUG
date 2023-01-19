@@ -37,7 +37,21 @@
                         <h3 class="blind">주택 검색 후 시세 결과 본문</h3>
                         <div class="addr-detail">
                             <div class="tag-wrap">
-                                <div class="tag">등록임대주택</div>
+                                <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
+                                <div class="tag tooltip-wrap">
+                                    등록임대주택
+                                    <button type="button" class="btn btn-ico ico-help03">
+                                        <span class="blind">도움말 보기</span>
+                                    </button>
+
+                                    <div class="tooltip left">
+                                        <span class="tooltip-txt">
+                                            해당 주택의 소유자는 임대사업자로 이 주택을 임대주택으로 등록하여 임대중입니다.
+                                        </span>
+                                        <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
+                                    </div>
+                                </div>
+                                <!-- //e:툴팁 -->
                                 <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
                                 <div class="tag tooltip-wrap">
                                     임대보증금보증가입
@@ -47,7 +61,7 @@
 
                                     <div class="tooltip right">
                                         <span class="tooltip-txt">
-                                            민간임대주택법에 따른 등록 임대주택 여부 및 임대보증 가입 여부
+                                            임대주택으로써 HUG 임대보증금보증에 가입된 주택입니다.
                                         </span>
                                         <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
                                     </div>
@@ -128,6 +142,11 @@
                             <div class="txt-wrap mt-10">
                                 <p class="txt">수도권 매물에 대해서만 부동산 정보가 제공됩니다.</p>
                             </div>
+
+                            <div class="more-info">
+                                <p class="txt">주택시세 상세 확인</p>
+                                <a href="http://www.rtech.or.kr/main/mapSearch.do?popUpYn=&posX=37.48243936583027&posY=127.06183029780048" title="한국부동산원 부동산테크으로 이동" class="btn-linktxt type04" target="_blank"><span>한국부동산원</span></a>
+                            </div>
                         </div>
 
                         <div class="btn-wrap">
@@ -138,8 +157,35 @@
                 <!-- //e:상단 결과 -->
 
                 <div class="inner-20">
+
+                    <!-- s:결과 요약 -->
+                    <div class="summary-wrap">
+                        <div class="summary safe">
+                            <div class="img">안전</div>
+                            <div class="txt">위반건축물<br>아님</div>
+                        </div>
+                        <div class="summary safe">
+                            <div class="img">안전</div>
+                            <div class="txt">무허가건축물<br>아님</div>
+                        </div>
+                        <div class="summary check">
+                            <div class="img">!<span class="blind">확인 필요</span></div>
+                            <div class="txt tooltip-wrap">
+                                권리침해 확인<br>필요 <button type="button" class="btn btn-ico ico-help03"><span class="blind">도움말 보기</span></button>
+
+                                <div class="tooltip full-right">
+                                    <span class="tooltip-txt">
+                                        가압류, 가등기 등 권리침해 사항은 부동산등기부등본 확인이 필요합니다. 공인중개사에게 등기부 확인을 요청하거나, 안심 전세 유료진단으로 확인할 수 있습니다.
+                                    </span>
+                                    <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //e:결과 요약 -->
+
                     <!-- s:전세 실거래가 테이블 -->
-                    <div class="tb-result mt-30">
+                    <div class="tb-result">
                         <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
                         <h4 class="title tooltip-wrap">전세 실거래가 
                             <button type="button" class="btn btn-ico ico-help03"><span class="blind">도움말 보기</span></button>
@@ -216,10 +262,6 @@
                             </table>
                         </div>
                         <div class="more-info">
-                            <p class="txt">주택시세 상세 확인</p>
-                            <a href="http://www.rtech.or.kr/main/mapSearch.do?popUpYn=&posX=37.48243936583027&posY=127.06183029780048" title="한국부동산원 부동산테크으로 이동" class="btn-linktxt type04" target="_blank"><span>한국부동산원</span></a>
-                        </div>
-                        <div class="more-info mt-5">
                             <p class="txt">실거래가 정보</p>
                             <a href="http://www.rtech.or.kr/main/mapSearch.do?popUpYn=&posX=37.48243936583027&posY=127.06183029780048" title="국토교통부 실거래가 공개시스템으로 이동" class="btn-linktxt type04" target="_blank"><span>국토교통부</span></a>
                         </div>
@@ -325,10 +367,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="more-info">
-                            <p class="txt">등록 임대주택에 관한 더 자세한 정보</p>
-                            <a href="" title="렌트홈으로 이동" class="btn-linktxt type04"><span>렌트홈 방문</span></a>
-                        </div>
                     </div>
                     <!-- //e:민간 임대주택 등록 정보 테이블 -->
 
@@ -374,6 +412,22 @@
                                     <!-- s:툴팁 -->
                                     <tr class="tooltip-wrap">
                                         <th scope="row">
+                                            공동담보설정
+                                            <button type="button" class="btn btn-ico ico-help03"><span class="blind">도움말 보기</span></button>
+
+                                            <div class="tooltip left">
+                                                <span class="tooltip-txt">
+                                                    주택가격대비 부채(선순위 물권 + 임대보증금)의 비율
+                                                </span>
+                                                <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
+                                            </div>
+                                        </th>
+                                        <td>해당없음 / <em class="fc-red">설정됨</em></td>
+                                    </tr>
+                                    <!-- //e:툴팁 -->
+                                    <!-- s:툴팁 -->
+                                    <tr class="tooltip-wrap">
+                                        <th scope="row">
                                             부채비율
                                             <button type="button" class="btn btn-ico ico-help03"><span class="blind">도움말 보기</span></button>
 
@@ -391,14 +445,19 @@
                                         <th scope="row">보증기간</th>
                                         <td>2020-12-10</td>
                                     </tr>
+                                    <tr>
+                                        <th scope="row">계약기간</th>
+                                        <td>2022.12.10 ~ 2024.12.10</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="txt-wrap mt-30">
                             <p class="txt type02">
-                                이 정보는 <em class="fc-black">보증가입 당시 임대차계약 기준</em> 입니다.이 주택의 현재 임차 조건 및 장래 보증가입 내용은 보고 계신 정보와 다를 수 있습니다.
+                                2020.00.00일을 개시일로 하는 임대차계약에 대한 보증 정보입니다. <br>
+                                이 주택의 현재 임차 조건 및 장래 보증가입 내용은 보고 계신 정보와 다를 수 있습니다.
                             </p>
-                            <br><br>
+                            <br>
                             <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
                             <div class="tooltip-wrap txt type02 ">
                                 보증가입 당시 
@@ -418,8 +477,13 @@
                             </div>
                             <!-- //e:툴팁 -->
                             <p class="txt type02">
-                                공동저당권이 설정된 주택은 <em class="fc-red">전세대출, 전세보증 가입에 제한</em>이 있을 수 있으니 유의바랍니다.
+                                공동저당권이 설정된 주택은 <em class="fc-red">전세대출, 전세보증 가입에 제한이 있을 수 있으니 유의바랍니다.</em>
                             </p>
+                        </div>
+                        
+                        <div class="more-info">
+                            <p class="txt">등록 임대주택에 관한 더 자세한 정보</p>
+                            <a href="" title="렌트홈으로 이동" class="btn-linktxt type04"><span>렌트홈 방문</span></a>
                         </div>
                     </div>
                     <!-- //e:HUG 임대보증금보증 가입 정보 테이블 -->
@@ -455,11 +519,10 @@
         <!-- //e:본문시작 -->
     
 
-        <div class="footer auto-hide footer-up">
-            <button type="button" class="btn btn-float btn-secondary org">결제없이 자가진단</button>
-            <!-- disabled 시 클래스에 disabled 추가	-->
-            <button type="button" class="btn btn-float type02 disabled" disabled>등기부 결제 후<br>자가진단</button>
-            <!-- <button type="button" class="btn btn-float type02">등기부 결제 후 자가진단</button>				 -->
+        <div class="footer auto-hide footer-up type02">
+            <button type="button" class="btn btn-float type02 btn-secondary org">결제없이<br>자가진단</button>
+            <!-- disabled 시 클래스에 disabled 추가	-->			
+            <button type="button" class="btn btn-float type02 disabled" disabled>등기사항 결제 후 진단<br>(등기변동내역 알림)</button>				
         </div>
     </div>
 

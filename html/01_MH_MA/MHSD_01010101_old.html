@@ -37,7 +37,21 @@
                         <h3 class="blind">주택 검색 후 시세 결과 본문</h3>
                         <div class="addr-detail pb-0">
                             <div class="tag-wrap">
-                                <div class="tag">등록임대주택</div>
+                                <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
+                                <div class="tag tooltip-wrap">
+                                    등록임대주택
+                                    <button type="button" class="btn btn-ico ico-help03">
+                                        <span class="blind">도움말 보기</span>
+                                    </button>
+
+                                    <div class="tooltip right">
+                                        <span class="tooltip-txt">
+                                            해당 주택의 소유자는 임대사업자로 이 주택을 임대주택으로 등록하여 임대중입니다.
+                                        </span>
+                                        <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
+                                    </div>
+                                </div>
+                                <!-- //e:툴팁 -->
                                 <!-- s:툴팁(tooltip-wrap으로 감싸기) -->
                                 <div class="tag tooltip-wrap">
                                     임대보증금보증가입
@@ -47,7 +61,7 @@
 
                                     <div class="tooltip right">
                                         <span class="tooltip-txt">
-                                            민간임대주택법에 따른 등록 임대주택 여부 및 임대보증 가입 여부
+                                            임대주택으로써 HUG 임대보증금보증에 가입된 주택입니다.
                                         </span>
                                         <button type="button" class="btn btn-ico btn-close"><span class="blind">툴팁 닫기</span></button>
                                     </div>
